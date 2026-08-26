@@ -3,53 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#123f38" />
+    <meta name="theme-color" content="#061827" />
     <title>Carta do Futuro | TCE-PR</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="landing.css" />
   </head>
   <body>
-    <main class="pagina">
-      <section class="hero" aria-labelledby="titulo">
-        <p class="sobretitulo">Tribunal de Contas do Estado do Paraná</p>
-        <h1 id="titulo">Carta do Futuro</h1>
-        <p class="introducao">Que futuro queremos construir para o controle externo, as instituições públicas e a cidadania no Paraná?</p>
-      </section>
+    <main class="entrada">
+      <header class="topo">
+        <img src="logo_horizontal_branco.png" alt="Tribunal de Contas do Estado do Paraná" />
+        <span></span>
+        <p>Escuta ativa</p>
+      </header>
 
-      <section class="cartao" id="formulario-area">
-        <form id="carta-form">
-          <label class="campo" for="nome">
-            <span>Como podemos chamar você?</span>
-            <input id="nome" name="nome" maxlength="60" autocomplete="name" required placeholder="Seu nome" />
-          </label>
+      <section class="convite" aria-labelledby="titulo">
+        <div class="apresentacao">
+          <p class="sobretitulo">Participação e cidadania</p>
+          <h1 id="titulo">Uma carta para o futuro do Paraná.</h1>
+          <p class="texto">Suas escolhas de hoje podem inspirar um controle público mais íntegro, próximo das pessoas e preparado para os desafios de amanhã.</p>
+          <p class="orientacao">Use seu celular para participar.</p>
+        </div>
 
-          <div class="escolhas-cabecalho">
-            <div>
-              <h2>Escolha até 5 prioridades</h2>
-              <p>Selecione os compromissos que considera essenciais para o futuro do TCE-PR.</p>
-            </div>
-            <strong id="contador" aria-live="polite">0 / 5</strong>
+        <section class="qr-card" aria-label="QR Code para acessar a Carta do Futuro">
+          <div class="qr-moldura">
+            <img src="qr-carta-do-futuro.png" alt="QR Code para abrir o formulário da Carta do Futuro" />
           </div>
-          <div id="temas" class="temas"></div>
-          <p id="erro" class="erro" role="alert"></p>
-          <button id="gerar" type="submit">Receber minha carta</button>
-        </form>
-
-        <div id="carregando" class="carregando escondido" aria-live="polite">
-          <span class="orbita" aria-hidden="true"></span>
-          <p id="frase-carregando">Conectando com o futuro…</p>
-        </div>
+          <div>
+            <p class="passo">Aponte a câmera</p>
+            <h2>Escolha as prioridades que quer ver no futuro.</h2>
+            <p>O QR Code abre a experiência no seu celular.</p>
+          </div>
+          <a class="link-formulario" href="form/">Abrir neste dispositivo <span aria-hidden="true">→</span></a>
+        </section>
       </section>
 
-      <section id="resultado" class="resultado escondido" aria-live="polite">
-        <article class="carta" id="texto-carta"></article>
-        <div class="acoes">
-          <button class="secundario" id="copiar" type="button">Copiar carta</button>
-          <button class="secundario" id="reiniciar" type="button">Fazer novas escolhas</button>
-        </div>
-      </section>
+      <footer>Tribunal de Contas do Estado do Paraná</footer>
     </main>
-    <script src="api-config.js"></script>
-    <script src="app.js"></script>
   </body>
 </html>
-

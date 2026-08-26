@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b3d4f" />
+    <title>Carta do Futuro | TCE-PR</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="pagina">
+      <header class="hero" aria-labelledby="titulo">
+        <div class="marca">
+          <img src="../logo_horizontal_branco.png" alt="Tribunal de Contas do Estado do Paraná" />
+          <span class="marca-divisor" aria-hidden="true"></span>
+          <p>Escuta ativa</p>
+        </div>
+        <div class="hero-conteudo">
+          <p class="sobretitulo">Participação e cidadania</p>
+          <h1 id="titulo">Carta do Futuro</h1>
+          <p class="introducao">Uma experiência para transformar as prioridades de hoje em compromisso com um Paraná mais íntegro, justo e eficiente.</p>
+        </div>
+        <p class="ano" aria-hidden="true">2046</p>
+      </header>
+
+      <section class="cartao" id="formulario-area" aria-labelledby="prioridades">
+        <div class="passo">Suas escolhas</div>
+        <form id="carta-form">
+          <label class="campo" for="nome">
+            <span>Como podemos chamar você?</span>
+            <input id="nome" name="nome" maxlength="60" autocomplete="name" required placeholder="Digite seu nome" />
+          </label>
+
+          <div class="escolhas-cabecalho">
+            <div>
+              <h2 id="prioridades">Qual futuro você quer ajudar a construir?</h2>
+              <p>Escolha até cinco prioridades essenciais para o controle público e a cidadania no Paraná.</p>
+            </div>
+            <strong id="contador" aria-live="polite">0 <small>de 5</small></strong>
+          </div>
+          <div id="temas" class="temas"></div>
+          <p id="erro" class="erro" role="alert"></p>
+          <button id="gerar" type="submit">Escrever minha carta <span aria-hidden="true">→</span></button>
+        </form>
+
+        <div id="carregando" class="carregando escondido" aria-live="polite">
+          <span class="orbita" aria-hidden="true"></span>
+          <p id="frase-carregando">Conectando com o futuro…</p>
+        </div>
+      </section>
+
+      <section id="resultado" class="resultado escondido" aria-live="polite">
+        <div class="passo"><span>02</span> Sua carta</div>
+        <article class="carta" id="texto-carta"></article>
+        <div class="acoes">
+          <button class="secundario" id="copiar" type="button">Copiar carta</button>
+          <button class="secundario" id="reiniciar" type="button">Fazer novas escolhas</button>
+        </div>
+      </section>
+      <footer>Tribunal de Contas do Estado do Paraná</footer>
+    </main>
+    <script src="../api-config.js"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>
