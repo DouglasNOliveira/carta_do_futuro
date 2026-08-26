@@ -1,0 +1,12 @@
+name = "carta-do-futuro-tce-pr"
+main = "src/index.js"
+compatibility_date = "2025-08-01"
+
+[vars]
+# Troque pela origem do seu GitHub Pages, sem barra no fim.
+ALLOWED_ORIGIN = "https://douglasnoliveira.github.io"
+AZURE_ENDPOINT = "https://ai-estudioinovacao2025347873520284.openai.azure.com"
+AZURE_OPENAI_API_VERSION = "2024-10-21"
+
+
+MODELOGPT = "gpt-4o-mini"
